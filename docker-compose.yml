@@ -1,0 +1,21 @@
+version: "3.9"
+services:
+  flask_app:
+    build: .
+    command: flask run --host=0.0.0.0
+    ports:
+      - 5000:5000
+    volumes:
+        - .:/code
+    env_file:
+        - .env
+
+  nginx:
+    image: nginx
+    restart: always
+    depends_on:
+      - flask_app
+    volumes:
+      - ./.docker/nginx.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - 80:80

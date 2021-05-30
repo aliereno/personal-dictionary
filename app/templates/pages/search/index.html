@@ -1,0 +1,39 @@
+{% extends "master/layout.html" %}
+
+{% block content %}
+<div class="container-fluid">
+
+    <!-- Content Row -->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Search</h6>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label" for="word">Word</label>
+                            <input class="form-control" id="word" type="text">
+                        </div>
+                        <button class="btn btn-primary" id="searchBtn" type="submit">Find</button>
+                        <button class="btn btn-success add-button" id="addBtn" type="button">Add to my dictionary
+                        </button>
+                    </form>
+                </div>
+                <div class="card-body">
+                    <label>Definitions</label>
+                    <div class="loading">
+                        <img src="{{ url_for('static', filename='img/loading.gif') }}"/>
+                    </div>
+                    <ul class="list-group definitions">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+{% endblock %}

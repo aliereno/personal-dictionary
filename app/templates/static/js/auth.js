@@ -1,15 +1,4 @@
 $(document).ready(function () {
-    var isLoggedIn = localStorage.getItem('loggedin');
-
-    if (isLoggedIn === 1) {
-        $('#sign').hide();
-        $('#loginForm').hide();
-        $('#signupForm').hide();
-        $('#logout').show();
-    } else {
-        $('#sign').show();
-        $('#logout').hide();
-    }
 
     $('#loginForm').on('submit', function (e) {
         e.preventDefault();

@@ -1,7 +1,10 @@
 from flask import Blueprint, render_template, redirect, url_for
 from flask_login import login_required, current_user
 
+from app.service.dashboard_service import DashboardService
+
 main = Blueprint('main', __name__)
+service = DashboardService()
 
 
 @main.before_request
@@ -20,11 +23,6 @@ def index():
 
 
 @main.route('/dashboard')
-@login_required
 def dashboard():
-    return render_template('pages/index.html')
-
-@main.route('/profile')
-@login_required
-def profile():
-    return render_template('pages/profile.html')
+    metric = service.get_dashboard_metric(current_user.id)
+    return render_template('pages/index.html', metric=metric)
