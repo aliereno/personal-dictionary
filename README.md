@@ -12,5 +12,8 @@ For the migrations;
 ```
 flask db upgrade
 ```
-<img src="/readme_resources/system_recording.gif" width="250" height="250" alt="system recording"/>
-<img src="/readme_resources/project_structure.gif" width="250" height="250" alt="project structure"/>
+### System Preview
+<img src="/readme_resources/system_recording.gif" width="1200" height="500" alt="system recording"/>
+
+### Projects Structre
+<img src="/readme_resources/project_structure.gif" width="800" height="700" alt="project structure"/>
