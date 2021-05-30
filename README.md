@@ -12,3 +12,5 @@ For the migrations;
 ```
 flask db upgrade
 ```
+<img src="/readme_resources/system_recording.gif" width="250" height="250" alt="system recording"/>
+<img src="/readme_resources/project_structure.gif" width="250" height="250" alt="project structure"/>
