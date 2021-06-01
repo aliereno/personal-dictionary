@@ -35,7 +35,7 @@ flask db upgrade
 | ------ | 
 | Repository Service Pattern |
 | Docker |
-| Boostrap |
+| Bootstrap |
 | Log Tracing |
 | Env support |
 | Metric Monitoring |
